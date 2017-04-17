@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4189C5C61EA49A110089B39A /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4189C5C51EA49A110089B39A /* CalculatorBrain.m */; };
 		41DF05EC1EA4229E00F6A8DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DF05EB1EA4229E00F6A8DC /* main.m */; };
 		41DF05EF1EA4229E00F6A8DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DF05EE1EA4229E00F6A8DC /* AppDelegate.m */; };
 		41DF05F21EA4229E00F6A8DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DF05F11EA4229E00F6A8DC /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4189C5C41EA49A110089B39A /* CalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
+		4189C5C51EA49A110089B39A /* CalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
 		41DF05E71EA4229E00F6A8DC /* Lab7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DF05EB1EA4229E00F6A8DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		41DF05ED1EA4229E00F6A8DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 				41DF05F01EA4229E00F6A8DC /* ViewController.h */,
 				41DF05F11EA4229E00F6A8DC /* ViewController.m */,
 				41DF05F31EA4229E00F6A8DC /* Main.storyboard */,
+				4189C5C41EA49A110089B39A /* CalculatorBrain.h */,
+				4189C5C51EA49A110089B39A /* CalculatorBrain.m */,
 				41DF05F61EA4229E00F6A8DC /* Assets.xcassets */,
 				41DF05F81EA4229E00F6A8DC /* LaunchScreen.storyboard */,
 				41DF05FB1EA4229E00F6A8DC /* Info.plist */,
@@ -153,6 +158,7 @@
 			files = (
 				41DF05F21EA4229E00F6A8DC /* ViewController.m in Sources */,
 				41DF05EF1EA4229E00F6A8DC /* AppDelegate.m in Sources */,
+				4189C5C61EA49A110089B39A /* CalculatorBrain.m in Sources */,
 				41DF05EC1EA4229E00F6A8DC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +320,7 @@
 				41DF06001EA4229E00F6A8DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
