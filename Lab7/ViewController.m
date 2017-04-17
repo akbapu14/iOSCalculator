@@ -49,6 +49,9 @@ typedef enum actionType : long {
 - (IBAction)numberPressed:(id)sender {
     UIButton *pressedButton = (UIButton *)sender;
     if (pressedButton.tag == 11) {
+        if ([_calculationString containsString:@"."]) {
+            return;
+        }
         if ([_calculationString  isEqual: @"0.0"]) {
             _calculationString = @"0.";
         } else {
@@ -80,25 +83,44 @@ typedef enum actionType : long {
     }
     [self updatecalculationView];
 }
+- (BOOL)hasDecimalPlaces: (double)operand1 _:(double)operand2 {
+    if ((int)operand1 != operand1) {
+        return true;
+    }
+    if ((int)operand2 != operand2) {
+        return true;
+    }
+    return false;
+}
+- (IBAction)tangent:(id)sender {
+    double input = [_calculationString doubleValue];
+    _calculationString = [NSString stringWithFormat:@"%.02f",tan(input) ];
+    [self updatecalculationView];
+}
 - (void)commitAction {
     double operand1 = [_savedOperand doubleValue];
     double operand2 = [_calculationString doubleValue];
+    double total = 0;
     switch (_currentAction) {
         case multiply: {
-            _calculationString = [NSString stringWithFormat:@"%f", (operand1 * operand2)];
+            total = operand1 * operand2;
             break;
         }
         case subtract:
-            _calculationString = [NSString stringWithFormat:@"%f", (operand1 - operand2)];
+            total = operand1 - operand2;
             break;
         case add:
-            _calculationString = [NSString stringWithFormat:@"%f", (operand1 + operand2)];
+            total = operand1 + operand2;
             break;
         default:
             break;
     }
+    if ([self hasDecimalPlaces:operand1 _:operand2]) {
+        _calculationString = [NSString stringWithFormat:@"%.02f", total];
+    } else {
+        _calculationString = [NSString stringWithFormat:@"%d", (int)total];
+    }
     [self updatecalculationView];
-
 }
 - (IBAction)actionPressed:(id)sender {
     switch (((UIButton *)sender).tag) {

@@ -49,6 +49,9 @@
                                 <state key="normal" title="tan">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tangent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UfH-4K-FXF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXT-wE-hvH">
                                 <rect key="frame" x="188" y="160" width="94" height="102"/>
