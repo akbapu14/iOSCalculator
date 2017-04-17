@@ -1,4 +1,4 @@
-# Lab 6 : Programmatic Design #
+# Lab 7 : Calculator #
 
 ## Due Date ##
 Tuesday, April 25th at 11:59 pm
