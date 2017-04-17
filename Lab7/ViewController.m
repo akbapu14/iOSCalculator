@@ -49,16 +49,16 @@ typedef enum actionType : long {
 - (IBAction)numberPressed:(id)sender {
     UIButton *pressedButton = (UIButton *)sender;
     if (pressedButton.tag == 11) {
-        if ([_calculationString containsString:@"."]) {
+        if ([_calculationString containsString:@"."] && !([_calculationString doubleValue] == 0)) {
             return;
         }
-        if ([_calculationString  isEqual: @"0.0"]) {
+        if ([_calculationString intValue] == 0) {
             _calculationString = @"0.";
         } else {
             _calculationString = [_calculationString stringByAppendingString:@"."];
         }
     } else {
-        if ([_calculationString  isEqual: @"0.0"]) {
+        if ([_calculationString doubleValue] == 0 && ![_calculationString isEqualToString:@"0."]) {
             if (pressedButton.tag == 0) {
                 
             } else {
